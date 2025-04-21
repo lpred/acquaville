@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acquavile Park Show</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Acquavile Park Show</h1>
+    <button id="cart-button">🛒 Carrinho (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main>
+    <section id="menu"></section>
+  </main>
+
+  <div id="cart-popup" class="hidden">
+    <h2>Seu Carrinho</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total">Total: R$ 0,00</div>
+    <input type="text" id="client-name" placeholder="Seu nome" />
+    <textarea id="order-notes" placeholder="Observações do pedido..."></textarea>
+    <button id="send-whatsapp">Enviar via WhatsApp</button>
+    <button id="close-cart">Fechar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
