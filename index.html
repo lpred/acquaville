@@ -68,10 +68,15 @@
     <h2>Carrinho</h2>
     <ul id="cart-items"></ul>
     <p>Total: R$ <span id="cart-total">0.00</span></p>
+    <div id="cart-mesa-select">
+      <label for="cart-mesa">Mesa:</label>
+      <select id="cart-mesa"></select>
+    </div>
     <input type="text" id="cliente-nome" placeholder="Seu nome" required />
     <textarea id="observacoes" placeholder="Observações..."></textarea>
-    <button id="finalizar-pedido">Enviar via WhatsApp</button>
-    <button id="fechar-carrinho">Fechar</button>
+    <button id="finalizar-pedido"><i class="fas fa-whatsapp"></i> Enviar via WhatsApp</button>
+    <button id="testar-pedido"><i class="fas fa-vial"></i> Testar Pedido</button>
+    <button id="fechar-carrinho"><i class="fas fa-times"></i> Fechar</button>
   </div>
 
   <script src="script.js"></script>
