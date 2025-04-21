@@ -21,10 +21,11 @@ header {
   margin-right: 1rem;
 }
 
-#mesa-select select {
+#mesa-select select, #cart-mesa-select select {
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 5px;
+  margin: 0.5rem 0;
 }
 
 #cart-button {
@@ -50,7 +51,7 @@ header {
   padding: 2rem;
   border: 2px solid #1E3A8A;
   border-radius: 10px;
-  width: 300px;
+  width: 320px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -61,19 +62,39 @@ header {
 #cart-items {
   list-style-type: none;
   padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 #cart-items li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 0.5rem;
 }
 
+#cart-items li button {
+  background: #DC2626;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
 #menu-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
   padding: 1rem;
+}
+
+.category {
+  margin-bottom: 1.5rem;
+}
+
+.category h3 {
+  background: #1E3A8A;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
 .menu-item {
@@ -84,14 +105,56 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu-item:hover {
   transform: scale(1.05);
 }
 
+.menu-item button {
+  background: #F97316;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 button {
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#finalizar-pedido {
+  background: #25D366;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+#testar-pedido {
+  background: #6B7280;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+#fechar-carrinho {
+  background: #1E3A8A;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
 }
 
 input, textarea {
@@ -108,7 +171,7 @@ input, textarea {
     align-items: flex-start;
   }
   #cart-popup {
-    width: 80%;
+    width: 85%;
     right: 5%;
   }
 }
