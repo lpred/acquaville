@@ -1,18 +1,19 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #333;
+  background-color: #F3F4F6;
+  color: #1E3A8A;
 }
 
 header {
-  background-color: #00b3b3;
+  background-color: #1E3A8A;
   color: white;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -22,15 +23,23 @@ header {
 
 #mesa-select select {
   font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
 #cart-button {
-  background-color: #ffd700;
+  background-color: #F97316;
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#cart-button:hover {
+  background-color: #EA580C;
 }
 
 #cart-popup {
@@ -39,10 +48,10 @@ header {
   right: 10%;
   background: white;
   padding: 2rem;
-  border: 2px solid #00b3b3;
+  border: 2px solid #1E3A8A;
   border-radius: 10px;
-  display: none;
   width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #cart-popup.hidden {
@@ -60,6 +69,46 @@ header {
   margin-bottom: 0.5rem;
 }
 
+#menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.menu-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
 button {
   cursor: pointer;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #1E3A8A;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #cart-popup {
+    width: 80%;
+    right: 5%;
+  }
 }
